@@ -3,6 +3,7 @@ import React, { useEffect,useState } from 'react';
 import './App.css';
 import Coins from './Coins';
 
+
 document.title="Crypto-Track"
 
 //https: https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
@@ -37,23 +38,35 @@ function App() {
         <div className="coin-search">
           <h1 className="coin-text">Search  a Currency</h1>
           <form>
-            <input type="text" className="coin-input" onChange={handleChange} placeholder="Search"></input>
+            <input type="search" className="coin-input" onChange={handleChange} placeholder="Search"></input>
           </form>
         </div>
-            {fileteredCoins.map(coin => {
-              return(
-                <Coins
-                  key={coin.id}
-                  img={coin.image}
-                  name={coin.name}
-                  symbol={coin.symbol}
-                  price={coin.current_price}
-                  volume={coin.total_volume}
-                  priceChange={coin.price_change_percentage_24h}
-                  marketCap={coin.market_cap}
-                />
-              )
-            })}
+        <table className="coin-table">
+                <tr>
+                    <th>Icon</th>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                    <th>Volume</th>
+                    <th>Change</th>
+                    <th>Market Capital</th> 
+                </tr>
+
+                {fileteredCoins.map(coin=>{
+                    return(
+                        <Coins
+                            key={coin.id}
+                            img={coin.image}
+                            name={coin.name}
+                            symbol={coin.symbol}
+                            price={coin.current_price}
+                            volume={coin.total_volume}
+                            priceChange={coin.price_change_percentage_24h}
+                            marketCap={coin.market_cap}
+                        />
+                    )
+                })}
+            </table>
       </div>
   );
 }
