@@ -1,4 +1,5 @@
 import React from 'react'
+import './Coins.css'
 
 function Coins({img,name,symbol,price,volume,priceChange,marketCap}) {
     return (

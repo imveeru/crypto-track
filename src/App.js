@@ -34,30 +34,27 @@ function App() {
 
   return (
     <div className="coin-app">
-      <div className="coin-search">
-        <h1 className="coin-text">Search  a Currency</h1>
-        <form>
-          <input type="text" className="coin-input" onChange={handleChange} placeholder="Search"></input>
-        </form>
-
-        {fileteredCoins.map(coin => {
-          return(
-            <Coins
-              key={coin.id}
-              img={coin.image}
-              name={coin.name}
-              symbol={coin.symbol}
-              price={coin.current_price}
-              volume={coin.total_volume}
-              priceChange={coin.price_change_percentage_24h}
-              marketCap={coin.market_cap}
-            />
-          )
-        })}
+        <div className="coin-search">
+          <h1 className="coin-text">Search  a Currency</h1>
+          <form>
+            <input type="text" className="coin-input" onChange={handleChange} placeholder="Search"></input>
+          </form>
+        </div>
+            {fileteredCoins.map(coin => {
+              return(
+                <Coins
+                  key={coin.id}
+                  img={coin.image}
+                  name={coin.name}
+                  symbol={coin.symbol}
+                  price={coin.current_price}
+                  volume={coin.total_volume}
+                  priceChange={coin.price_change_percentage_24h}
+                  marketCap={coin.market_cap}
+                />
+              )
+            })}
       </div>
-
-      
-    </div>
   );
 }
 
