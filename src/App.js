@@ -38,7 +38,7 @@ function App() {
         <div className="coin-search">
           <h1 className="coin-text">Search  a Currency</h1>
           <form>
-            <input type="search" className="coin-input" onChange={handleChange} placeholder="Search"></input>
+            <input type="search" className="coin-input" onChange={handleChange} placeholder="Type some crypto currency to search..."></input>
           </form>
         </div>
         <table className="coin-table">
