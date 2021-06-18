@@ -2,6 +2,8 @@ import axios from 'axios';
 import React, { useEffect,useState } from 'react';
 import './App.css';
 import Coins from './Coins';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
 
 document.title="Crypto-Track"
@@ -41,16 +43,18 @@ function App() {
             <input type="search" className="coin-input" onChange={handleChange} placeholder="Type some crypto currency to search..."></input>
           </form>
         </div>
-        <table className="coin-table">
+        <Table className="coin-table">
+              <Thead>
                 <tr>
-                    <th>Icon</th>
-                    <th>Name</th>
-                    <th>Symbol</th>
-                    <th>Price</th>
-                    <th>Volume</th>
-                    <th>Change</th>
-                    <th>Market Capital</th> 
+                    <Th>Icon</Th>
+                    <Th>Name</Th>
+                    <Th>Symbol</Th>
+                    <Th>Price</Th>
+                    <Th>Volume</Th>
+                    <Th>Change</Th>
+                    <Th>Market Capital</Th> 
                 </tr>
+              </Thead>
 
                 {fileteredCoins.map(coin=>{
                     return(
@@ -66,7 +70,7 @@ function App() {
                         />
                     )
                 })}
-            </table>
+            </Table>
       </div>
   );
 }
