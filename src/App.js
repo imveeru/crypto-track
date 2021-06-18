@@ -40,37 +40,39 @@ function App() {
         <div className="coin-search">
           <h1 className="coin-text">Search  a Currency</h1>
           <form>
-            <input type="search" className="coin-input" onChange={handleChange} placeholder="Type some crypto currency to search..."></input>
+            <input type="search" className="coin-input" onChange={handleChange} placeholder="Type some crypto currency..."></input>
           </form>
         </div>
-        <Table className="coin-table">
-              <Thead>
-                <tr>
-                    <Th>Icon</Th>
-                    <Th>Name</Th>
-                    <Th>Symbol</Th>
-                    <Th>Price</Th>
-                    <Th>Volume</Th>
-                    <Th>Change</Th>
-                    <Th>Market Capital</Th> 
-                </tr>
-              </Thead>
+        <div>
+          <Table className="coin-table">
+                <Thead>
+                  <Tr>
+                      <Th>Icon</Th>
+                      <Th>Name</Th>
+                      <Th>Symbol</Th>
+                      <Th>Price</Th>
+                      <Th>Volume</Th>
+                      <Th>Change</Th>
+                      <Th>Market Capital</Th> 
+                  </Tr>
+                </Thead>
 
-                {fileteredCoins.map(coin=>{
-                    return(
-                        <Coins
-                            key={coin.id}
-                            img={coin.image}
-                            name={coin.name}
-                            symbol={coin.symbol}
-                            price={coin.current_price}
-                            volume={coin.total_volume}
-                            priceChange={coin.price_change_percentage_24h}
-                            marketCap={coin.market_cap}
-                        />
-                    )
-                })}
-            </Table>
+                  {fileteredCoins.map(coin=>{
+                      return(
+                          <Coins
+                              key={coin.id}
+                              img={coin.image}
+                              name={coin.name}
+                              symbol={coin.symbol}
+                              price={coin.current_price}
+                              volume={coin.total_volume}
+                              priceChange={coin.price_change_percentage_24h}
+                              marketCap={coin.market_cap}
+                          />
+                      )
+                  })}
+              </Table>
+            </div>
       </div>
   );
 }

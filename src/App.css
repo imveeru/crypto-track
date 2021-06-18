@@ -2,7 +2,7 @@
 
 *{
   box-sizing: border-box;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   font-family: Montserrat,sans-serif;
   background-color:#220b2e;
@@ -31,10 +31,12 @@
 }
 
 .coin-input{
-  padding: 0 30px 0px 30px;
-  width:500px;
-  height: 50px;
+  padding: 20px 30px;
+  width: 100%;
+  /* width:500px;
+  height: 50px; */
   border-radius:5px;
+  /* margin-left: 20px; */
   border:solid 1px #ffffff;
   /*background-image: linear-gradient(-225deg,#ac32e4 0%,#7918f2 48%, #4801ff 100%);*/
   color: #e2e2e2;
@@ -53,11 +55,11 @@
 }
 
 .coin-table{
-  width: 80%;
+  width: 100%;
 }
 
 th,td{
-  height:100px;
+  height:120px;
   text-align:center;
   vertical-align: middle;
   border-bottom: solid 1px #e2e2e2;
