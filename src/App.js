@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect,useState } from 'react';
 import './App.css';
 import Coins from './Coins';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import { Table, Thead,  Tr, Th } from 'react-super-responsive-table'
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css'
 
 
@@ -44,7 +44,7 @@ function App() {
           </form>
         </div>
         <div>
-          <Table className="coin-table">
+          <Table>
                 <Thead>
                   <Tr>
                       <Th>Icon</Th>
